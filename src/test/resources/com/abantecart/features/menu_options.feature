@@ -18,3 +18,12 @@ Feature: Abantecart menu options
   |Nails|
   |Value Sets|
   
+  Scenario: Verify skincare from menu options
+  Given I logged into abantecart
+  When I hover over skincare menu
+  Then following menu options should be visible for skincare:
+   |Eyes|
+   |Face|
+   |Gift Ideas & Sets|
+   |Hands & Nails|
+   |Sun|
