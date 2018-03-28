@@ -2,7 +2,7 @@ Feature: Search
 
   Scenario: Search Item
     Given I logged into abantecart
-    Then I search for item
+    Then I search for "shirt" from search box
     Then The item is displayed
 
   Scenario: Search Item
