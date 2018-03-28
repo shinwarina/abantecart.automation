@@ -2,15 +2,15 @@ Feature: Abantecart menu options
 
   Scenario: Verify apparel & accessories from menu options
   Given I logged into abantecart
-  When I hover over apparel & accessories menu
-  Then following menu options should be visible for apparel & accessories:
+  When I hover over Apparel & Accessories menu
+  Then following menu options should be visible for Apparel & Accessories:
   |Shoes|
   |T-shirts|
   
   Scenario: Verify make up from menu options
   Given I logged into abantecart
-  When I hover over make up menu
-  Then following menu options should be visible for make up:
+  When I hover over Makeup menu
+  Then following menu options should be visible for Makeup:
   |Cheeks|
   |Eyes|
   |Face|
@@ -18,10 +18,17 @@ Feature: Abantecart menu options
   |Nails|
   |Value Sets|
   
+  Scenario: Verify make up from menu options
+    Given I logged into abantecart
+    When I hover over Fragrance menu
+    Then following menu options should be visible for Fragrance:
+      | Men   |
+      | Women |
+  
   Scenario: Verify skincare from menu options
   Given I logged into abantecart
-  When I hover over skincare menu
-  Then following menu options should be visible for skincare:
+  When I hover over Skincare menu
+  Then following menu options should be visible for Skincare:
    |Eyes|
    |Face|
    |Gift Ideas & Sets|
@@ -30,8 +37,8 @@ Feature: Abantecart menu options
    
    Scenario: Verify men from menu options
   Given I logged into abantecart
-  When I hover over men menu
-  Then following menu options should be visible for men:
+  When I hover over Men menu
+  Then following menu options should be visible for Men:
    |Body & Shower|
    |Fragrance Sets|
    |Pre-Shave & Shaving|
