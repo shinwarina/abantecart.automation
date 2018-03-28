@@ -27,3 +27,12 @@ Feature: Abantecart menu options
    |Gift Ideas & Sets|
    |Hands & Nails|
    |Sun|
+   
+   Scenario: Verify men from menu options
+  Given I logged into abantecart
+  When I hover over men menu
+  Then following menu options should be visible for men:
+   |Body & Shower|
+   |Fragrance Sets|
+   |Pre-Shave & Shaving|
+   |Skincare|
