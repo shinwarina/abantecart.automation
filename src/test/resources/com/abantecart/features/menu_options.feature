@@ -18,7 +18,7 @@ Feature: Abantecart menu options
       | Nails      |
       | Value Sets |
 
-  Scenario: Verify make up from menu options
+  Scenario: Verify Fragrance from menu options
     Given I logged into abantecart
     When I hover over Fragrance menu
     Then following menu options should be visible for Fragrance:
