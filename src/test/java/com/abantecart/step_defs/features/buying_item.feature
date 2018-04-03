@@ -1,5 +1,5 @@
 Feature: Buying the item
-
+@Bahor
   Scenario: Buy the item
     Given I logged into abantecart
     Then I search for "shirt" from search box
@@ -7,7 +7,7 @@ Feature: Buying the item
     When I change my shipping address to "Naseer Shinwari"
     And Confirm my order
     Then I navigate to order detailes page and my order exists
-
+@Bahor
   Scenario: Buy the item
     Given I logged into abantecart
     When I hover over Fragrance menu
