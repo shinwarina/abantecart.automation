@@ -16,16 +16,16 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public WebElement loginname;
+	public WebElement loginFrm_loginname;
 	
-	public WebElement password;
+	public WebElement loginFrm_password;
 	
 	@FindBy(xpath="//form[@id='loginFrm']/fieldset/button")
 	public WebElement loginButton;
 	
 	public void login() {
-		loginname.sendKeys(ConfigurationReader.getProperty("username"));
-		password.sendKeys(ConfigurationReader.getProperty("password"));
+		loginFrm_loginname.sendKeys(ConfigurationReader.getProperty("username"));
+		loginFrm_password.sendKeys(ConfigurationReader.getProperty("password"));
 		loginButton.click();
 	}
 

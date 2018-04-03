@@ -11,8 +11,8 @@ public class CheckOutPage {
 
 	private WebDriver driver;
 
-	public CheckOutPage(WebDriver driver) {
-		this.driver=driver;
+	public CheckOutPage() {
+		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
 

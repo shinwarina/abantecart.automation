@@ -5,10 +5,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		plugin= {"pretty","html:target/cucumber-report"},
-		tags= "",
+		tags= "@test",
 		features="src/test/resources/com/abantecart/features",
 		glue="com/abantecart/step_defs",
-		dryRun=true
+		dryRun=false
 		)
 public class CukesRunner extends AbstractTestNGCucumberTests {
 	

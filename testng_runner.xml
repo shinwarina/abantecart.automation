@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Abantecart Automation" verbose="2">
+	<test name="Automated tests">
+		<classes>
+			<class name="com.abantecart.runners.CukesRunner"></class>
+		</classes>
+	</test>
+</suite>

@@ -10,14 +10,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.abantecart.utilities.Driver;
+
 public class DashboardPage {
 	
 private WebDriver driver;
 	
-	public DashboardPage(WebDriver driver) {
-		this.driver = driver;
+	public DashboardPage() {
+		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(linkText="Login or register")
+	public WebElement loginOrRegister;
 	
 	@FindBy(linkText = "Welcome back Admin")
 	public WebElement welcomeBackAdmin;
