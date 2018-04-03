@@ -24,10 +24,10 @@ public class AccountPage {
 	@FindBy(linkText = "Account Dashboard")
 	public WebElement AccountDashboard;
 	
-	@FindBy(linkText = " My wish list")
+	@FindBy(linkText = "My wish list")
 	public WebElement Mywishlist;
 	
-	@FindBy(linkText = " Edit account details")
+	@FindBy(linkText = "Edit account details")
 	public WebElement  Editaccountdetails;
 	
 	
@@ -38,9 +38,8 @@ public class AccountPage {
 	@FindBy(linkText = "Manage Address Book")
 	public WebElement ManageAddressBook;
 	
-	@FindBy(linkText = "  Order history")
+	@FindBy(linkText = "Order history")
 	public WebElement   Orderhistory;
-	
 	 
 }
 
