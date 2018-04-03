@@ -21,7 +21,7 @@ public class Hooks {
 		driver.manage().window().maximize();
 	}
 
-	@After
+//	@After
 	public void tearDown(Scenario scenario) {
 		if(scenario.isFailed()) {
 		final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES); 

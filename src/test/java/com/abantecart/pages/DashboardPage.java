@@ -20,6 +20,8 @@ private WebDriver driver;
 		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
+	@FindBy(xpath = "//input[@id='filter_keyword']")
+	public WebElement search;
 	
 	@FindBy(linkText="Login or register")
 	public WebElement loginOrRegister;

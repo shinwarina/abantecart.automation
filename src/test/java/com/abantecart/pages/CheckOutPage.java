@@ -32,4 +32,17 @@ public class CheckOutPage {
 	@FindBy(linkText ="Edit Cart")
 	public WebElement editCart;
 	
+	@FindBy(linkText ="Change Address")
+	public WebElement changeAddress;
+	
+	@FindBy(linkText ="//table[@class='table table-striped']/tbody/tr")
+	public WebElement allAddressBookEntries;
+	
+	public void chooseAddress(String address) {
+			
+		if(allAddressBookEntries.toString().contains(address)) {
+			
+		}
+	}
+	
 }
