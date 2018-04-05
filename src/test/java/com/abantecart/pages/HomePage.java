@@ -38,6 +38,10 @@ public class HomePage {
 
 	@FindBy(linkText = "  BOOKS")
 	public WebElement books;
+	
+	@FindBy(linkText = "    Men")
+	public WebElement menFragrance;
+	
 
 	public List<WebElement> menuOptions(String menu) {
 		String xpath = "//a[contains(text(),'"+menu+"')]/..//li/a";

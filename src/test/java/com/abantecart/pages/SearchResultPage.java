@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.abantecart.utilities.Browserutils;
 import com.abantecart.utilities.Driver;
 
 public class SearchResultPage {
@@ -30,6 +31,7 @@ public class SearchResultPage {
 			 item= driver.findElement(By.xpath(xpath));
 		}
 		item.click();
+		Browserutils.waitForClickablility(addToCart, 2);
 		addToCart.click();
 	}
 }

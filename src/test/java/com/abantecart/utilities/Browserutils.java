@@ -22,25 +22,27 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Browserutils {
-	
+
 	/**
-	 * return a list of string from a list of elements
-	 * ignores any elements with no texts
+	 * return a list of string from a list of elements ignores any elements with no
+	 * texts
+	 * 
 	 * @param list
 	 * @return
 	 */
-	public static List<String> getElementsText(List<WebElement> list){
+	public static List<String> getElementsText(List<WebElement> list) {
 		List<String> elemTexts = new ArrayList<>();
-		for(WebElement el : list) {
-			if(!el.getText().isEmpty()) {
+		for (WebElement el : list) {
+			if (!el.getText().isEmpty()) {
 				elemTexts.add(el.getText());
 			}
 		}
 		return elemTexts;
 	}
+
 	// create a method that accepts a locator/by object
-		// returns arraylist containing texts for all matching elements
-		// store into BrowserUtil class
+	// returns arraylist containing texts for all matching elements
+	// store into BrowserUtil class
 	public static List<String> getElementsTexts(By locator) {
 		List<WebElement> elems = Driver.getDriver().findElements(locator);
 
@@ -75,8 +77,9 @@ public class Browserutils {
 	}
 
 	public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS)
-				.pollingEvery(timeinsec, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
+				.withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
+				.ignoring(NoSuchElementException.class);
 		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
 				return webElement;
@@ -119,14 +122,10 @@ public class Browserutils {
 		}
 		Driver.getDriver().switchTo().window(origin);
 	}
-	
+
 	public static void hover(WebElement element) {
 		Actions actions = new Actions(Driver.getDriver());
 		actions.moveToElement(element).perform();
 	}
-	
-	
 
-	
-	
 }

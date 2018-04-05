@@ -21,6 +21,7 @@ private WebDriver driver;
 		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
+	
 	@FindBy(xpath = "//input[@id='filter_keyword']")
 	public WebElement search;
 	
@@ -41,6 +42,7 @@ private WebDriver driver;
 	
 	@FindBy(linkText = "CHECKOUT")
 	public WebElement checkOut;
+	
 	
 	public List<WebElement> topMenuOptions(String link){
 			String xpath = "//a[contains(text(),'"+ link +"')]/../../li/a";
