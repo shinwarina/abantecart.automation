@@ -7,8 +7,7 @@ Feature: Search
 
   Scenario Outline: Search item through suggestion categories
     Given I logged into abantecart
-    When I click in search box
-    When I select suggestion category from the list "<category>"
+    When I select suggestion category from the search box list "<category>"
     Then That category should be selected in search criteria category dropdown list
 
     Examples: 
