@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.abantecart.utilities.Browserutils;
 import com.abantecart.utilities.Driver;
 
 public class DashboardPage {
@@ -26,8 +27,8 @@ private WebDriver driver;
 	@FindBy(linkText="Login or register")
 	public WebElement loginOrRegister;
 	
-	@FindBy(linkText = "Welcome back Admin")
-	public WebElement welcomeBackAdmin;
+	@FindBy(linkText = "Welcome back Java")
+	public WebElement welcomeBackJava;
 	
 	@FindBy(linkText = "SPECIALS")
 	public WebElement specials;
@@ -46,5 +47,25 @@ private WebDriver driver;
 			Set<WebElement> set = (Set<WebElement>) driver.findElements(By.xpath(xpath));
 			return new ArrayList(set);
 		}
+	
+	public List<String> listOfElementsFromTopMenuOptions() {
+		Browserutils.hover(welcomeBackJava);
+		String xpath = "//a[contains(text(),'Account Dashboard')]/../../li/a";
+		List<WebElement> elements = driver.findElements(By.xpath(xpath));
+
+		List<String> list = new ArrayList<>();
+		for (int i = 0; i < elements.size(); i++) {
+			if (i < 10) {
+				if (elements.get(i).getText().substring(0, 2).equals("  ")) {
+					list.add(elements.get(i).getText().substring(2));
+				} else {
+					list.add(elements.get(i).getText());
+				}
+			} else {
+				elements.remove(i);
+			}
+		}
+		return list;
+	}
 	
 }

@@ -23,29 +23,23 @@ public class AccountPage {
 		return false;
 	}
 	
-	@FindBy(linkText = "Account Dashboard")
-	public WebElement AccountDashboard;
+	@FindBy(linkText = "  Account Dashboard")
+	public WebElement accountDashboard;
 	
-	@FindBy(linkText = "My wish list")
-	public WebElement Mywishlist;
+	@FindBy(linkText = "  My wish list")
+	public WebElement mywishlist;
 	
-	@FindBy(linkText = "Edit account details")
-	public WebElement  Editaccountdetails;
+	@FindBy(linkText = "  Edit account details")
+	public WebElement  editaccountdetails;
 	
 	
-	@FindBy(linkText = "Change password")
-	public WebElement Changepassword;
+	@FindBy(linkText = "  Change password")
+	public WebElement changepassword;
 	
-	  
-	@FindBy(linkText = "Manage Address Book")
-	public WebElement ManageAddressBook;
+	@FindBy(linkText = "  Manage Address Book")
+	public WebElement manageAddressBook;
 	
-	@FindBy(linkText = "Order history")
-	public WebElement   Orderhistory;
+	@FindBy(linkText = "  Order history")
+	public WebElement   orderhistory;
 	 
-	
 }
-
-
-
-
