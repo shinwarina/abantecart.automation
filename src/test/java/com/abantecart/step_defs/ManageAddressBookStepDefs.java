@@ -1,5 +1,7 @@
 package com.abantecart.step_defs;
 
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 
 import com.abantecart.pages.AccountPage;
@@ -23,8 +25,20 @@ private WebDriver driver = Driver.getDriver();
 	AddressBookPage addressBookPage = new AddressBookPage();
 	
 	@When("^I am at the manage address book page$")
-	public void i_am_at_the_manage_address_book_page() {
+	public void i_am_at_the_manage_address_book_page(Map<String, String> manageAddress) {
 	    Browserutils.hover(dashBoardPage.welcomeBackJava);
 	    dashBoardPage.welcomeBackJava.click();
+	    
+	    
+	    
+	    if(manageAddress.get("firstname") != null) {
+		   addressBookPage.firstName.sendKeys(manageAddress.get("firstname"));
+		    }
+	    if(manageAddress.get("lastname") != null) {
+			   addressBookPage.lastName.sendKeys(manageAddress.get("lastname"));
+			    }
+	    if(manageAddress.get("address") != null) {
+	    	addressBookPage.address.sendKeys(manageAddress.get("address"));
+		    }
 	}
 }
