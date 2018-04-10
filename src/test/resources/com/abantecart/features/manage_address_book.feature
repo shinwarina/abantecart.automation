@@ -1,6 +1,6 @@
-@Naseer
-Feature: Abantecart address book
 
+Feature: Abantecart address book
+@Naseer
   Scenario Outline: Adding new address using Beans
     Given I logged into abantecart
     When I am at the manage address book page
