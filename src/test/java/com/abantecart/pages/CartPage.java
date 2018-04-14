@@ -14,6 +14,8 @@ public class CartPage {
 		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
+	@FindBy(className="bgnone")
+	public WebElement itemInfo;
 	
 	@FindBy(id="cart_checkout1")
 	public WebElement Checkout;
@@ -23,6 +25,12 @@ public class CartPage {
 	
 	@FindBy(xpath = "//table[@class='table table-striped table-bordered']/tbody/tr/td//div[@class='input-group input-group-sm']//input[@type='text']")
 	public WebElement cartQuantity;
+	
+	@FindBy (className="productfilneprice")
+	public WebElement itemPrice;
+	
+	@FindBy(className = "cart")
+	public WebElement addToCart;
 
 	
 	public static boolean verifyAccountPageIsLoaded(WebDriver driver) {

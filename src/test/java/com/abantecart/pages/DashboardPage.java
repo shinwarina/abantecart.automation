@@ -43,6 +43,21 @@ private WebDriver driver;
 	@FindBy(linkText = "CHECKOUT")
 	public WebElement checkOut;
 	
+	@FindBy(xpath="//div[@class='myaccountbox']//a[contains(text(),'Order history')]")
+	public WebElement orderHistory;
+	
+	@FindBy(className="block_6")
+	public WebElement currency;
+	
+	@FindBy(xpath="//a[contains(text(),'Euro')]")
+	public WebElement euroCurrency;
+	
+	@FindBy(xpath="//a[contains(text(),'US Dollar')]")
+	public WebElement dollarCurrency;
+	
+	@FindBy(xpath="//a[contains(text(),'Pound')]")
+	public WebElement poundCurrency;
+	
 	
 	public List<WebElement> topMenuOptions(String link){
 			String xpath = "//a[contains(text(),'"+ link +"')]/../../li/a";
