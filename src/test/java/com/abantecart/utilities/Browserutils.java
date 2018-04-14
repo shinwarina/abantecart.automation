@@ -19,6 +19,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Browserutils {
@@ -126,6 +127,26 @@ public class Browserutils {
 	public static void hover(WebElement element) {
 		Actions actions = new Actions(Driver.getDriver());
 		actions.moveToElement(element).perform();
+	}
+
+	public static boolean isTextPresent(String label) {
+		try {
+			Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+			WebElement ele = Driver.getDriver()
+					.findElement(By.xpath("//body//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
+							+ "'abcdefghijklmnopqrstuvwxyz'),'" + label.toLowerCase() + "')]"));
+			return ele.isDisplayed();
+		} catch (NoSuchElementException e) {
+			return false;
+		} finally {
+			Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		}
+
+	}
+
+	public static void selectDropDownByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
 	}
 
 }

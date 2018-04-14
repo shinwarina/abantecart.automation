@@ -58,6 +58,9 @@ private WebDriver driver;
 	@FindBy(xpath="//a[contains(text(),'Pound')]")
 	public WebElement poundCurrency;
 	
+	@FindBy(xpath = "//button[@title = 'Continue']")
+	public WebElement ContinueButton;
+	
 	
 	public List<WebElement> topMenuOptions(String link){
 			String xpath = "//a[contains(text(),'"+ link +"')]/../../li/a";
