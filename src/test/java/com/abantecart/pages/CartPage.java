@@ -18,7 +18,7 @@ public class CartPage {
 	public WebElement itemInfo;
 	
 	@FindBy(id="cart_checkout1")
-	public WebElement Checkout;
+	public  WebElement Checkout;
 	
 	@FindBy(id="cart_update")
 	public WebElement Update;
@@ -31,6 +31,13 @@ public class CartPage {
 	
 	@FindBy(className = "cart")
 	public WebElement addToCart;
+	
+	@FindBy(xpath = "//i[@class='fa fa-trash-o fa-fw']")
+	public WebElement delete;
+	
+	@FindBy(xpath = "//div[@class='contentpanel']")
+	public WebElement isEmpty;
+
 
 	
 	public static boolean verifyAccountPageIsLoaded(WebDriver driver) {
