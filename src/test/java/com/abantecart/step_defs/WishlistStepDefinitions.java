@@ -45,22 +45,9 @@ public class WishlistStepDefinitions {
 	    wishlistPage.isEmpty.isDisplayed();
 	}
 
-	@Then("^My item \"([^\"]*)\" should be in cart$")
-	public void my_item_should_be_in_cart(String arg1) {
-		dashBoardPage.search.sendKeys(arg1);
-		assertEquals(dashBoardPage.search.getAttribute("value"), arg1);
-		dashBoardPage.search.sendKeys(Keys.ENTER);
-		cartPage.addToCart.click();
-	}
 
-	@When("^I delete item from cart$")
-	public void i_delete_item_from_cart() {
-	    cartPage.delete.click();
-	}
 
-	@Then("^Cart should be empty$")
-	public void cart_should_be_empty() {
-	   cartPage.isEmpty.isDisplayed();
-	}
+
+	
 
 }
