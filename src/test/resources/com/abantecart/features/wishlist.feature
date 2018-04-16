@@ -1,5 +1,5 @@
 Feature: Add items
- @Busara1
+ @Smoke
   Scenario: Add item to wishlist
     Given I logged into abantecart
     When I add item "Skinsheen Bronzer Stick" to wishlist

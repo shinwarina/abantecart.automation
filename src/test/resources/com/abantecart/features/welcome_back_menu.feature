@@ -1,6 +1,6 @@
 Feature: Verifying Welcome back menu options
 
-  @Artem
+  @Smoke
   Scenario: Verify welcome back options are displayed
     Given I logged into abantecart
     When I hover over Welcome back menu

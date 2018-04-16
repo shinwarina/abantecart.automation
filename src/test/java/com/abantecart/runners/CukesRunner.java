@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		plugin= {"pretty","html:target/cucumber-report"},
-		tags= "@Busara1",
+		tags= "@Smoke",
 		features="src/test/resources/com/abantecart/features",
 		glue="com/abantecart/step_defs",
 		dryRun=false
